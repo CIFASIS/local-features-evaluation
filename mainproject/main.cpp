@@ -98,12 +98,216 @@ double calc_description(Ptr<Feature2D> extractor, Mat &img, vector<KeyPoint> &ke
 
 int main(int argc, char** argv)
 {
+	std::string paths[200] = {"images/0001.png",
+							  "images/0002.png",
+							  "images/0003.png",
+							  "images/0004.png",
+							  "images/0005.png",
+							  "images/0006.png",
+							  "images/0007.png",
+							  "images/0008.png",
+							  "images/0009.png",
+							  "images/0010.png",
+							  "images/0011.png",
+							  "images/0012.png",
+							  "images/0013.png",
+							  "images/0014.png",
+							  "images/0015.png",
+							  "images/0016.png",
+							  "images/0017.png",
+							  "images/0018.png",
+							  "images/0019.png",
+							  "images/0020.png",
+							  "images/0021.png",
+							  "images/0022.png",
+							  "images/0023.png",
+							  "images/0024.png",
+							  "images/0025.png",
+							  "images/0026.png",
+							  "images/0027.png",
+							  "images/0028.png",
+							  "images/0029.png",
+							  "images/0030.png",
+							  "images/0031.png",
+							  "images/0032.png",
+							  "images/0033.png",
+							  "images/0034.png",
+							  "images/0035.png",
+							  "images/0036.png",
+							  "images/0037.png",
+							  "images/0038.png",
+							  "images/0039.png",
+							  "images/0040.png",
+							  "images/0041.png",
+							  "images/0042.png",
+							  "images/0043.png",
+							  "images/0044.png",
+							  "images/0045.png",
+							  "images/0046.png",
+							  "images/0047.png",
+							  "images/0048.png",
+							  "images/0049.png",
+							  "images/0050.png",
+							  "images/0051.png",
+							  "images/0052.png",
+							  "images/0053.png",
+							  "images/0054.png",
+							  "images/0055.png",
+							  "images/0056.png",
+							  "images/0057.png",
+							  "images/0058.png",
+							  "images/0059.png",
+							  "images/0060.png",
+							  "images/0061.png",
+							  "images/0062.png",
+							  "images/0063.png",
+							  "images/0064.png",
+							  "images/0065.png",
+							  "images/0066.png",
+							  "images/0067.png",
+							  "images/0068.png",
+							  "images/0069.png",
+							  "images/0070.png",
+							  "images/0071.png",
+							  "images/0072.png",
+							  "images/0073.png",
+							  "images/0074.png",
+							  "images/0075.png",
+							  "images/0076.png",
+							  "images/0077.png",
+							  "images/0078.png",
+							  "images/0079.png",
+							  "images/0080.png",
+							  "images/0081.png",
+							  "images/0082.png",
+							  "images/0083.png",
+							  "images/0084.png",
+							  "images/0085.png",
+							  "images/0086.png",
+							  "images/0087.png",
+							  "images/0088.png",
+							  "images/0089.png",
+							  "images/0090.png",
+							  "images/0091.png",
+							  "images/0092.png",
+							  "images/0093.png",
+							  "images/0094.png",
+							  "images/0095.png",
+							  "images/0096.png",
+							  "images/0097.png",
+							  "images/0098.png",
+							  "images/0099.png",
+							  "images/0100.png",
+							  "images/0101.png",
+							  "images/0102.png",
+							  "images/0103.png",
+							  "images/0104.png",
+							  "images/0105.png",
+							  "images/0106.png",
+							  "images/0107.png",
+							  "images/0108.png",
+							  "images/0109.png",
+							  "images/0110.png",
+							  "images/0111.png",
+							  "images/0112.png",
+							  "images/0113.png",
+							  "images/0114.png",
+							  "images/0115.png",
+							  "images/0116.png",
+							  "images/0117.png",
+							  "images/0118.png",
+							  "images/0119.png",
+							  "images/0120.png",
+							  "images/0121.png",
+							  "images/0122.png",
+							  "images/0123.png",
+							  "images/0124.png",
+							  "images/0125.png",
+							  "images/0126.png",
+							  "images/0127.png",
+							  "images/0128.png",
+							  "images/0129.png",
+							  "images/0130.png",
+							  "images/0131.png",
+							  "images/0132.png",
+							  "images/0133.png",
+							  "images/0134.png",
+							  "images/0135.png",
+							  "images/0136.png",
+							  "images/0137.png",
+							  "images/0138.png",
+							  "images/0139.png",
+							  "images/0140.png",
+							  "images/0141.png",
+							  "images/0142.png",
+							  "images/0143.png",
+							  "images/0144.png",
+							  "images/0145.png",
+							  "images/0146.png",
+							  "images/0147.png",
+							  "images/0148.png",
+							  "images/0149.png",
+							  "images/0150.png",
+							  "images/0151.png",
+							  "images/0152.png",
+							  "images/0153.png",
+							  "images/0154.png",
+							  "images/0155.png",
+							  "images/0156.png",
+							  "images/0157.png",
+							  "images/0158.png",
+							  "images/0159.png",
+							  "images/0160.png",
+							  "images/0161.png",
+							  "images/0162.png",
+							  "images/0163.png",
+							  "images/0164.png",
+							  "images/0165.png",
+							  "images/0166.png",
+							  "images/0167.png",
+							  "images/0168.png",
+							  "images/0169.png",
+							  "images/0170.png",
+							  "images/0171.png",
+							  "images/0172.png",
+							  "images/0173.png",
+							  "images/0174.png",
+							  "images/0175.png",
+							  "images/0176.png",
+							  "images/0177.png",
+							  "images/0178.png",
+							  "images/0179.png",
+							  "images/0180.png",
+							  "images/0181.png",
+							  "images/0182.png",
+							  "images/0183.png",
+							  "images/0184.png",
+							  "images/0185.png",
+							  "images/0186.png",
+							  "images/0187.png",
+							  "images/0188.png",
+							  "images/0189.png",
+							  "images/0190.png",
+							  "images/0191.png",
+							  "images/0192.png",
+							  "images/0193.png",
+							  "images/0194.png",
+							  "images/0195.png",
+							  "images/0196.png",
+							  "images/0197.png",
+							  "images/0198.png",
+							  "images/0199.png",
+							  "images/0200.png"};
+
+	for (int i=0; i<200; i=i+2)
+	{
 	constexpr bool multithread = true;
-	double t1,t2,tdet,tdesc=0,tmatch=0;
+	double t1,t2,tdet,tdesc=0,tmatch=0, tanms=0;
 	Mat src_1,src_2, descriptors_1, descriptors_2;
 	Helper ImageHelper;
 	Mat masks_1, masks_2;
 	vector<Mat> patches_1, patches_2;
+	string anms_string="";
 
 	vector<KeyPoint> keypoints_1, keypoints_2;
 	int kpts;
@@ -111,11 +315,16 @@ int main(int argc, char** argv)
 	//src_2 = imread("images/imagenes_blackbird/left_images/left_1531254018.588000.png", CV_LOAD_IMAGE_GRAYSCALE);
 	//src_1 = imread("/home/emiliano/DRINK/data/leuven/img1.ppm", CV_LOAD_IMAGE_GRAYSCALE);
 	//src_2 = imread("/home/emiliano/DRINK/data/leuven/img3.ppm", CV_LOAD_IMAGE_GRAYSCALE);
-	src_1 = imread("images/000000.png", CV_LOAD_IMAGE_GRAYSCALE);
-	src_2 = imread("images/000001.png", CV_LOAD_IMAGE_GRAYSCALE);
-	// src_1 = imread("images/python1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
-	// src_2 = imread("images/python2.jpg", CV_LOAD_IMAGE_GRAYSCALE);
 
+	//src_1 = imread("images/000000.png", CV_LOAD_IMAGE_GRAYSCALE);
+	//src_2 = imread("images/000001.png", CV_LOAD_IMAGE_GRAYSCALE);
+	//src_1 = imread("images/python1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	//src_2 = imread("images/python2.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	src_1 = imread(paths[i], CV_LOAD_IMAGE_GRAYSCALE);
+	src_2 = imread(paths[i+1], CV_LOAD_IMAGE_GRAYSCALE);
+
+	cout<<paths[i]<<endl;
+	cout<<paths[i+1]<<endl;
 
 	//Ayuda
 	if(argc < 4 || argc > 6){
@@ -294,12 +503,12 @@ int main(int argc, char** argv)
 		return 0;
 	}
 
-	//kpts=keypoints_1.size();
+	kpts=keypoints_1.size();
         //cout<<"argc: "<<argc<<endl;
 	//cout<<argv[5]<<endl;
 	if((argc == 6 && !strcmp("anms", argv[5] )) || (argc == 5 && !strcmp("anms", argv[4] )) ){
 		/*ANMS*/
-		double t1,t2, tanms=0;
+		double t1,t2;
 		t1 = cv::getTickCount();
 		ssc(keypoints_1,500,0.1,src_1.cols,src_1.rows);
 		t2 = cv::getTickCount();
@@ -307,7 +516,7 @@ int main(int argc, char** argv)
 		cout<<"Tiempo ANMS: "<<tanms<<endl;
 		cout<<"Tiempo det + ANMS: "<<tanms+tdet<<endl;
                 ssc(keypoints_2,500,0.1,src_2.cols,src_2.rows);
-
+		anms_string="_ANMS";
 	}
 
 	//Descriptores
@@ -725,15 +934,22 @@ int main(int argc, char** argv)
 
 	//Archivo para guardar resultados
 	ofstream file("Resultados.txt", ios_base::app);
+	ofstream tiempos_det((string)"tiempos_det_"+(string)argv[1]+anms_string+(string)".txt", ios_base::app);
+	ofstream tiempos_desc((string)"tiempos_desc_"+(string)argv[2]+(string)".txt", ios_base::app);
+	ofstream tiempos_match((string)"tiempos_match_"+(string)argv[3]+(string)".txt", ios_base::app);
 	//file.open()
+	file<<"Imagenes: "<<i<<" y " <<i+1<<endl;
 	file<<argv[1]<<" + "<<argv[2]<<":"<<endl;
 	//file <<"Cantidad de Keypoints: "<< keypoints.size() << endl;
 	file <<"Cantidad de Keypoints: "<< kpts << endl;
 	file<<"Descriptor size: "<<descriptors_1.size()<<endl;
 	file<<"Tiempo deteccion: "<<tdet<<" ms "<<endl;
+	tiempos_det<<tanms+tdet<<endl;
 	file<<"Tiempo descripcion: "<<tdesc<<" ms "<<endl;
+	tiempos_desc<<tdesc<<endl;
 	file<<"Tiempo descripcion por keypoint: "<<tdesc*1000/descriptors_1.rows<<" us "<<endl;
 	file<<"Tiempo Match: "<<tmatch<<" ms "<<endl;
+	tiempos_match<<tmatch<<endl;
 	file<<"Tiempo total: "<<tdet+tdesc+tmatch<<" ms "<<endl;
 	if(!strcmp (argv[3], "GMS"))
 		file<<"Good matches: "<<gms_matches.size()<<endl<<endl;
@@ -745,5 +961,6 @@ int main(int argc, char** argv)
 	//file<<"Matches correctos (inliers): "<<	homography_matches.size() <<
 		//" ("<<100.f * (float) homography_matches.size() / (float) good_matches.size()<<"%)"<<endl<<endl;
 	waitKey(0);
+	}
 	return 0;
 }
