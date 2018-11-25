@@ -7,6 +7,9 @@ using namespace std;
 void ssc(vector<cv::KeyPoint>& keyPoints, unsigned int numRetPoints,float tolerance, int cols, int rows){
 
 	//Sorting keypoints by deacreasing order of strength
+    if(keyPoints.size() <= 0)
+		return;
+
     vector<int> responseVector;
     for (unsigned int i =0 ; i<keyPoints.size(); i++) responseVector.push_back(keyPoints[i].response);
     vector<int> Indx(responseVector.size()); std::iota (std::begin(Indx), std::end(Indx), 0);
@@ -43,7 +46,9 @@ void ssc(vector<cv::KeyPoint>& keyPoints, unsigned int numRetPoints,float tolera
             break;
         }
         result.clear();
-        double c = width/2; //initializing Grid
+        unsigned int c = round(width/2); //initializing Grid
+        if (c < 1)
+			break;
         int numCellCols = floor(cols/c);
         int numCellRows = floor(rows/c);
         vector<vector<bool> > coveredVec(numCellRows+1,vector<bool>(numCellCols+1,false));

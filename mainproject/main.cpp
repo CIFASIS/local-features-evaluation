@@ -351,7 +351,7 @@ int main(int argc, char** argv)
 		/* void FAST(InputArray image, vector<KeyPoint>& keypoints, int threshold, bool nonmaxSuppression=true )*/
 		/* Parametros SPTAM:   threshold: 60 nonmaxSuppression: true*/
 
-		Ptr<FastFeatureDetector> detector=FastFeatureDetector::create(20, true);
+		Ptr<FastFeatureDetector> detector=FastFeatureDetector::create(90, true);
 		//Ptr<FastFeatureDetector> detector_2=FastFeatureDetector::create(106);
 		detector->detect(src_1,keypoints_1,Mat());
 		
@@ -899,9 +899,9 @@ int main(int argc, char** argv)
 		cout<<"Matches correctos (inliers): "<<	homography_matches.size() <<
 			" ("<<100.f * (float) homography_matches.size() / (float) good_matches.size()<<"%)"<<endl;
 
-		t2 = cv::getTickCount();
-		tmatch += 1000.0*(t2-t1) / cv::getTickFrequency();
-		cout<<"Tiempo FLANN + RANSAC: "<< tmatch <<" ms" <<endl;
+//		t2 = cv::getTickCount();
+//		tmatch += 1000.0*(t2-t1) / cv::getTickFrequency();
+//		cout<<"Tiempo FLANN + RANSAC: "<< tmatch <<" ms" <<endl;
 
 		/*for( int i = 0; i < (int)good_matches.size(); i++ )
 		printf( "-- Good Match [%d] Keypoint 1: %d  -- Keypoint 2: %d \n", i, good_matches[i].queryIdx,good_matches[i].trainIdx); 
@@ -935,8 +935,8 @@ int main(int argc, char** argv)
 	//Archivo para guardar resultados
 	ofstream file("Resultados.txt", ios_base::app);
 	ofstream tiempos_det((string)"tiempos_det_"+(string)argv[1]+anms_string+(string)".txt", ios_base::app);
-	ofstream tiempos_desc((string)"tiempos_desc_"+(string)argv[2]+(string)".txt", ios_base::app);
-	ofstream tiempos_match((string)"tiempos_match_"+(string)argv[3]+(string)".txt", ios_base::app);
+	ofstream tiempos_desc((string)"tiempos_desc_"+(string)argv[1]+anms_string+"_"+(string)argv[2]+(string)".txt", ios_base::app);
+	ofstream tiempos_match((string)"tiempos_match_"+(string)argv[1]+anms_string+"_"+(string)argv[2]+"_"+(string)argv[3]+(string)".txt", ios_base::app);
 	//file.open()
 	file<<"Imagenes: "<<i<<" y " <<i+1<<endl;
 	file<<argv[1]<<" + "<<argv[2]<<":"<<endl;
