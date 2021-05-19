@@ -51,9 +51,3 @@ your hardware supports them, you can uncomment the lines in the options.cmake fi
 that part of the code. (**BAFT** and **LOCKY** also compiled with these optimizations
 and didn't work properly, code is not commented though as they work just fine
 without this. Again, if **avx2** and **fma** *are* supported, add them to the Makefile).
-
-### TODO: ###
-- [x] Add Makefile
-- [x] Try OpenCv Matching implementation
-- [ ] Add other features to compare
-- [ ] Don't know
