@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     checkinstall \
-    x11-apps && \
+    x11-apps \
     libgstreamer-plugins-base1.0-dev \
     libgstreamer1.0-dev \
     libavcodec-dev \
