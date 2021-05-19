@@ -9,6 +9,11 @@ Run the docker image
 docker run --name evaluation --rm -it evaluation:latest
 ```
 
+OR Run Docker with GUI support:
+```
+sh run_docker_gui.sh
+```
+
 Executable will appear in `<proyecto_path>/build/mainproject`
 
 In there run:
@@ -16,7 +21,9 @@ In there run:
 `./Features DetectorName DescriptorName MatcherName [anms] [show]`
 
 Passing the option **anms** enables the Adaptative Non-Maximal Suppression.
+
 Passing the option **show** displays the images with the matches.
+
 ### Supported Detectors: ###
 - FAST
 - ORB

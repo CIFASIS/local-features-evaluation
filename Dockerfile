@@ -1,8 +1,7 @@
 FROM ubuntu:16.04
 
+ENV DISPLAY="$DISPLAY"
 ENV HOME="/root"
-# ENV ROS_DISTRO="kinetic"
-# ENV CATKIN_WS="${HOME}/catkin_ws"
 ENV EVALUATION_DIR="${HOME}/local-features-evaluation"
 ENV DEPENDENCIES_DIR="${HOME}/dependencies"
 ENV OPENCV_DIR="${DEPENDENCIES_DIR}/opencv"
@@ -15,6 +14,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     checkinstall \
+    x11-apps && \
     libgstreamer-plugins-base1.0-dev \
     libgstreamer1.0-dev \
     libavcodec-dev \
