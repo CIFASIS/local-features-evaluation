@@ -14,7 +14,7 @@ OR Run Docker with GUI support:
 sh run_docker_gui.sh
 ```
 
-Executable will appear in `<proyecto_path>/build/mainproject`
+Executable will appear in `<project-path>/build/mainproject`
 
 In there run:
 
