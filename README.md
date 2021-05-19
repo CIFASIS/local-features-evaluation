@@ -1,24 +1,23 @@
-## Proyecto ##
+## Compilation ##
+Docker container is provided to facilitate the compilation and execution
 
-### Useful commands: ###
-
-Compilation:
 ```
-$ mkdir build
-$ cd build
-$ cmake ..
-$ make
+docker build . --tag evaluation:latest
+```
+Run the docker image
+```
+docker run --name evaluation --rm -it evaluation:latest
 ```
 
 Executable will appear in `<proyecto_path>/build/mainproject`
 
 In there run:
 
-`./Features DetectorName DescriptorName MatcherName [show]`
+`./Features DetectorName DescriptorName MatcherName [anms] [show]`
 
+Passing the option **anms** enables the Adaptative Non-Maximal Suppression.
 Passing the option **show** displays the images with the matches.
-
-### Available Detectors: ###
+### Supported Detectors: ###
 - FAST
 - ORB
 - BRISK
@@ -27,7 +26,7 @@ Passing the option **show** displays the images with the matches.
 - BAFT
 - LOCKY(S)
 
-### Available Descriptors: ###
+### Supported Descriptors: ###
 - BRIEF
 - BRISK
 - FREAK
@@ -38,7 +37,7 @@ Passing the option **show** displays the images with the matches.
 - BAFT
 - BOLD
 
-### Available Matchers: ###
+### Supported Matchers: ###
 - BFM
 - FLANN
 - GMS

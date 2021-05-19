@@ -60,5 +60,8 @@ RUN mkdir build && \
     cmake .. && \
     make -j
 
+# Go to the executable directory
+WORKDIR ${EVALUATION_DIR}/build/mainproject
+
 # in order to leave running the terminal we should leave running bash
 RUN ["/bin/bash"]
