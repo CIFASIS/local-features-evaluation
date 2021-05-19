@@ -1,3 +1,7 @@
+
+# Disclaimer
+This site and the code provided here are under active development. Even though we try to only release working high quality code, this version might still contain some issues. Please use it with caution.
+
 ## Compilation ##
 Docker container is provided to facilitate the compilation and execution
 
