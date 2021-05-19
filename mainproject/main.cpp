@@ -113,8 +113,8 @@ int main(int argc, char** argv)
 	//src_2 = imread("/home/emiliano/DRINK/data/leuven/img3.ppm", CV_LOAD_IMAGE_GRAYSCALE);
 	src_1 = imread("images/000000.png", CV_LOAD_IMAGE_GRAYSCALE);
 	src_2 = imread("images/000001.png", CV_LOAD_IMAGE_GRAYSCALE);
-	src_1 = imread("images/python1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
-	src_2 = imread("images/python2.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	// src_1 = imread("images/python1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	// src_2 = imread("images/python2.jpg", CV_LOAD_IMAGE_GRAYSCALE);
 
 
 	//Ayuda
