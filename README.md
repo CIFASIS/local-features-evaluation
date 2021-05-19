@@ -4,6 +4,9 @@ Docker container is provided to facilitate the compilation and execution
 ```
 docker build . --tag evaluation:latest
 ```
+
+## Run ##
+
 Run the docker image
 ```
 docker run --name evaluation --rm -it evaluation:latest
