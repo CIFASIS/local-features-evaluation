@@ -31,7 +31,7 @@ Passing the option **anms** enables the Adaptative Non-Maximal Suppression.
 
 Passing the option **show** displays the images with the matches.
 
-## Supported Detectors:
+## Supported Detectors
 - FAST
 - ORB
 - BRISK
@@ -40,7 +40,7 @@ Passing the option **show** displays the images with the matches.
 - BAFT
 - LOCKY(S)
 
-## Supported Descriptors:
+## Supported Descriptors
 - BRIEF
 - BRISK
 - FREAK
@@ -51,12 +51,12 @@ Passing the option **show** displays the images with the matches.
 - BAFT
 - BOLD
 
-## Supported Matchers: ###
+## Supported Matchers ###
 - BFM
 - FLANN
 - GMS
 
-## Observations: ###
+## Observations ###
 
 **LATCHK** requires **-mavx2** and **-mfma** flags to work, they're currently disabled and
 LATCHK's code commented as one of our laptops didn't support **avx2** nor **fma**. If
