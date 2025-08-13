@@ -3,7 +3,7 @@
 
 If you use this in some academic work, please cite the related publication:
 
-Pire, Taih\'{u}; Gonzalez, Hern\'{a}n; Santano, Emiliano; Terissi, Lucas; Civera, Javier, **An experimental evaluation of feature detectors and descriptors for visual SLAM**. International Journal of Computational Vision and Robotics, 2023. DOI: https://doi.org/10.1504/IJCVR.2023.130648
+Pire, Taihú; Gonzalez, Hernán; Santano, Emiliano; Terissi, Lucas; Civera, Javier, **An experimental evaluation of feature detectors and descriptors for visual SLAM**. International Journal of Computational Vision and Robotics, 2023. DOI: https://doi.org/10.1504/IJCVR.2023.130648
 
 ```bibtex
 @article{pire2023experimental,
