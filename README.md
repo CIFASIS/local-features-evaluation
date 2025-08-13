@@ -1,4 +1,25 @@
 
+# Publication
+
+If you use this in some academic work, please cite the related publication:
+
+Pire, Taih\'{u}; Gonzalez, Hern\'{a}n; Santano, Emiliano; Terissi, Lucas; Civera, Javier, **An experimental evaluation of feature detectors and descriptors for visual SLAM**. International Journal of Computational Vision and Robotics, 2023. DOI: https://doi.org/10.1504/IJCVR.2023.130648
+
+```bibtex
+@article{pire2023experimental,
+ author = {Pire, Taih\'{u} and Gonzalez, Hern\'{a}n and Santano, Emiliano and Terissi, Lucas and Civera, Javier},
+ title = {An experimental evaluation of feature detectors and descriptors for visual SLAM},
+ journal = {International Journal of Computational Vision and Robotics},
+ volume = {13},
+ number = {3},
+ pages = {316--341},
+ year = {2023},
+ doi = {https://doi.org/10.1504/IJCVR.2023.130648},
+ URL = {https://www.inderscienceonline.com/doi/abs/10.1504/IJCVR.2023.130648},
+ eprint = {https://www.inderscienceonline.com/doi/pdf/10.1504/IJCVR.2023.130648}
+}
+```
+
 # Disclaimer
 This site and the code provided here are under active development. Even though we try to only release working high quality code, this version might still contain some issues. Please use it with caution.
 
